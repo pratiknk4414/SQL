@@ -1,0 +1,38 @@
+----Creating Table Cricket_players_ind
+
+Create table Cricket_players_ind(id int, player_name varchar(100), Player_loc varchar(100))
+
+Select * from Cricket_players_ind
+
+insert into Cricket_players_ind values ('1','Rohit','India')
+insert into Cricket_players_ind values ('2','Bumrah','India')
+insert into Cricket_players_ind values ('3','Virat','India')
+insert into Cricket_players_ind values ('4','Suryakumar','India')
+insert into Cricket_players_ind values ('5','Ishan','India')
+
+----Creating table Cricket_players_shrilanka
+
+Create table Cricket_players_shrilanka(id int, player_name varchar(100), Player_loc varchar(100))
+
+select * from Cricket_players_shrilanka
+
+insert into Cricket_players_shrilanka values (1,'Malinga','Shrilanka')
+insert into Cricket_players_shrilanka values (2,'Mahela Jayvardhane','Shrilanka')
+insert into Cricket_players_shrilanka values (3,'Dilshan','Shrilanka')
+insert into Cricket_players_shrilanka values (4,'Tushara','Shrilanka')
+insert into Cricket_players_shrilanka values (4,'Tushara','Shrilanka')
+
+
+----UNION operator
+
+Select * from Cricket_players_ind
+union
+select * from Cricket_players_shrilanka
+order by player_name 
+
+----UNION ALL Operator
+
+select * from Cricket_players_shrilanka
+union all
+select * from Cricket_players_ind
+order by player_name
